@@ -5,15 +5,7 @@ const GameSection = ({ bid, setBid, playGame, gameResult, showBoxes }) => (
     <div className="boxes">
       {[0, 1, 2].map(index => (
         <div key={index}
-          className={`box ${
-                        showBoxes
-                        ? gameResult?.winningBox === index
-                        ? 'winner'
-                        : gameResult?.userChoice === index
-                        ? 'chosen'
-                        : 'loser'
-                        : ''
-                      }`}
+         className={`box ${gameResult?.userChoice === index ? 'selected' : ''}`}
           onClick={() => !showBoxes && playGame(index)}
         >
           📦
