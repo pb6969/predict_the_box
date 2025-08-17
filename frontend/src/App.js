@@ -47,7 +47,7 @@ function App() {
       const result = await playGameAPI(choice, bid, token);
       setGameResult(result);
       setGameData(prev => ({ ...prev, balance: result.balance, accuracy: result.accuracy }));
-      getUserData();
+      getUserData();   
     } catch (err) {
       alert(err.message);
     }
