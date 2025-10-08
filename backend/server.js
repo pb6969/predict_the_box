@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import jwt from 'jsonwebtoken';
+import bcrypt from 'bcryptjs';
 
 
 dotenv.config();
@@ -163,6 +164,7 @@ app.delete('/api/game/history', authMiddleware, async (req, res) => {
 });
 
 app.listen(5000, () => console.log('Server running on port 5000'));
+
 
 
 
